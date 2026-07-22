@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { ROUTES } from '../constants/routes';
 import { Button } from '../components/Button';
+import brandLogo from '../../public/logo-marketers-cafe.png';
 import './MainLayout.css';
 
 interface MainLayoutProps {
@@ -35,7 +36,7 @@ export function MainLayout({ children }: MainLayoutProps) {
       <header className="site-header">
         <div className="header-container container">
           <Link to={ROUTES.HOME} className="brand-logo-area" aria-label="Marketers Cafe Home">
-            <img src="logo-marketers-cafe.png" alt="Marketers Cafe Logo" className="brand-logo-img" />
+            <img src={brandLogo} alt="Marketers Cafe Logo" className="brand-logo-img" />
             <span className="brand-logo-text">Marketers Cafe</span>
           </Link>
 
@@ -108,7 +109,7 @@ export function MainLayout({ children }: MainLayoutProps) {
           <div className="footer-top-grid">
             <div className="footer-brand-column">
               <div className="brand-logo-area">
-                <img src="logo-marketers-cafe.png" alt="Marketers Cafe Logo" className="brand-logo-img" />
+                <img src={brandLogo} alt="Marketers Cafe Logo" className="brand-logo-img" />
                 <span className="brand-logo-text">Marketers Cafe</span>
               </div>
               <p className="footer-brand-purpose">
