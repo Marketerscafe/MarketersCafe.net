@@ -109,7 +109,7 @@ export function Contact() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Marketers Cafe",
-      "image": "https://marketerscafe.net/logo-red.png",
+      "image": "https://marketerscafe.net/logo-marketers-cafe.png",
       "telephone": "+918121110210",
       "email": "hello@marketerscafe.net",
       "address": {
