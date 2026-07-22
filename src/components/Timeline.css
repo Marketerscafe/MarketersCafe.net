@@ -1,0 +1,111 @@
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+  padding-left: var(--space-4);
+}
+
+.timeline-line-indicator {
+  position: absolute;
+  top: 0;
+  left: 28px; /* Offset to center the line behind the nodes */
+  width: 1px;
+  height: 100%;
+  background-color: var(--border-primary);
+  z-index: 1;
+}
+
+.timeline-items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.timeline-left-column {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-node {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: border-color var(--transition-normal), background-color var(--transition-normal);
+}
+
+.timeline-row:hover .timeline-node {
+  border-color: var(--brand-accent);
+  background-color: var(--bg-tertiary);
+}
+
+.timeline-node-value {
+  font-family: var(--font-mono);
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+}
+
+.timeline-row:hover .timeline-node-value {
+  color: var(--brand-accent);
+}
+
+.timeline-details-card {
+  padding-top: var(--space-1);
+}
+
+.timeline-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.timeline-headline {
+  font-size: var(--font-lg);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.timeline-body {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: 0;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    padding-left: 0;
+  }
+  .timeline-line-indicator {
+    left: 20px;
+  }
+  .timeline-row {
+    grid-template-columns: 40px 1fr;
+    gap: var(--space-3);
+  }
+  .timeline-node {
+    width: 28px;
+    height: 28px;
+  }
+}
