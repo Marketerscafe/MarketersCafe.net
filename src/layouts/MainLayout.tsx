@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { ROUTES } from '../constants/routes';
 import { Button } from '../components/Button';
-import brandLogo from '../../public/logo-marketers-cafe.png';
 import './MainLayout.css';
 
 interface MainLayoutProps {
@@ -36,7 +35,7 @@ export function MainLayout({ children }: MainLayoutProps) {
       <header className="site-header">
         <div className="header-container container">
           <Link to={ROUTES.HOME} className="brand-logo-area" aria-label="Marketers Cafe Home">
-            <img src={brandLogo} alt="Marketers Cafe Logo" className="brand-logo-img" />
+            <img src="/logo-marketers-cafe.svg" alt="Marketers Cafe Logo" className="brand-logo-img" />
             <span className="brand-logo-text">Marketers Cafe</span>
           </Link>
 
@@ -109,7 +108,7 @@ export function MainLayout({ children }: MainLayoutProps) {
           <div className="footer-top-grid">
             <div className="footer-brand-column">
               <div className="brand-logo-area">
-                <img src={brandLogo} alt="Marketers Cafe Logo" className="brand-logo-img" />
+                <img src="/logo-marketers-cafe.svg" alt="Marketers Cafe Logo" className="brand-logo-img" />
                 <span className="brand-logo-text">Marketers Cafe</span>
               </div>
               <p className="footer-brand-purpose">
@@ -136,7 +135,7 @@ export function MainLayout({ children }: MainLayoutProps) {
 
             <div className="footer-links-column">
               <h4 className="footer-heading">Digital HQ</h4>
-              <p className="footer-info-text">HQ BLR, HYD</p>
+              <p className="footer-info-text">Bangalore, India</p>
               <p className="footer-info-text">hello@marketerscafe.net</p>
             </div>
           </div>
